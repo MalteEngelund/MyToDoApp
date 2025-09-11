@@ -116,6 +116,7 @@
 
     currentData.lists.forEach((list, idx) => {
       const div = document.createElement("div");
+      div.className = "listPreview";
       div.innerHTML = `
         <h2 onclick="listClickCallback('showList',${idx})">${list.name}</h2>
         <button onclick="listClickCallback('editList',${idx})" class="buttonTest">Edit</button>
@@ -140,6 +141,7 @@
     // Show each item
     list.items.forEach((item, idx) => {
       const div = document.createElement("div");
+      div.className = "itemPreview";
       div.innerHTML = `
         <span>${item.name}</span>
         <button onclick="itemClickCallback('editItem',${idx})">Edit</button>

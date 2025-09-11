@@ -2,6 +2,7 @@
     :root{
       --main-yellow: #FFDF60;
       --secondary-yellow: #FDFFA0;
+      --list-yellow: #FFFACD;
       --darkMode-black: #333333;
       --darkMode-yellow: #999933;
     }
@@ -28,8 +29,11 @@
          grid-template-columns: repeat(3, 1fr);
          background-color: var(--secondary-yellow);
          color: #000000;
+         border: #333333 2px solid;
+         border-radius: 8px;
          text-align: center;
-         padding: 10px 0;
+         padding: 10px;
+         margin:  20px;
          font-size: 24px;
          position: sticky;
          top: 0;
@@ -42,14 +46,35 @@
          padding: 20px;
       }
 
-      
+      .listPreview {
+         border: 2px solid black;
+         border-radius: 8px;
+         padding: 10px;
+         margin-bottom: 20px;
+         background-color: var(--secondary-yellow);
+      }
+
+      .itemPreview {
+         border: 1px solid black;
+         border-radius: 4px;
+         padding: 5px;
+         margin-bottom: 10px;
+         background-color: var(--secondary-yellow);
+         display: flex;
+         align-items: center;
+      }
+      .itemPreview button {
+         margin-left: 10px;
+      }
+
       footer {
          justify-content: center;   
          text-align: center;
-         margin-top: 20px;
+         margin:  20px 20px 0px 20px;
          background-color: var(--secondary-yellow);
+         border: #333333 2px solid;
+         border-radius: 8px;
          height: 100px;
-         width: 100%;
          position: sticky;
          bottom: 0;
          }  
@@ -72,9 +97,17 @@
 
          .dark-mode {
             background-color: #333333;
-            color: #FFFFFF;
+            color: #333333;
          }
          .dark-mode header, .dark-mode footer {
             background-color: var(--darkMode-yellow);
-            color: var(--darkMode-black);
+            color: #333333;
+         }
+         .dark-mode .listPreview {
+            background-color: var(--darkMode-yellow);
+            border-color: var(--darkMode-black);
+         }
+         .dark-mode .itemPreview {
+            background-color: var(--darkMode-yellow);
+            border-color: var(--darkMode-black);
          }
