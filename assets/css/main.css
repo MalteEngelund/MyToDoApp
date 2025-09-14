@@ -44,9 +44,11 @@
       #content {
          padding: 20px;
          padding-top: 150px;
-         padding-bottom: 100px;
+         padding-bottom: 120px;
       }
-
+      .listOverview {
+         margin-left: 10px;
+      }
       .listPreview {
          border: 2px solid black;
          border-radius: 8px;
@@ -59,6 +61,10 @@
       }
       .listPreview h2:hover {
          color: var(--darkMode-black);
+      }
+      .listPreview button {
+         margin-left: 10px;
+         cursor: pointer;
       }
 
       .itemPreview {
@@ -73,6 +79,7 @@
       }
       .itemPreview button {
          margin-left: 10px;
+         cursor: pointer;
       }
       .buttonTest{
          width: 40px;
@@ -92,6 +99,20 @@
 
       #newListButton:hover {
          color: var(--darkMode-black);
+      }
+
+      .backButton {
+         border: none;
+         background-color: transparent;
+         cursor: pointer;
+         width: 40px;
+      }
+      .backButton:hover {
+         filter: brightness(5) invert(0.5);
+      }
+      .backButton img {
+         width: 100%;
+         height: 100%;
       }
 
       footer {
@@ -135,6 +156,9 @@
             background-color: var(--darkMode-yellow);
             border-color: var(--darkMode-black);
          }
+         .dark-mode .listOverview {
+            color: var(--darkMode-yellow);
+         }
          .dark-mode .itemPreview {
             background-color: var(--darkMode-yellow);
             border-color: var(--darkMode-black);
@@ -143,4 +167,17 @@
 
 
          /* darkmode switch */
-         
+         #darkModeButton {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            width: 40px;
+            align-items: center;
+         }
+         #darkModeButton img {
+            width: 100%;
+            height: 100%;
+         }
+         #darkModeButton:hover {
+            filter: brightness(5) invert(0.5);
+         }

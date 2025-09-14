@@ -112,6 +112,7 @@
 
     const listOverview = document.createElement("h2");
     listOverview.innerText = "Lister:"
+    listOverview.className = "listOverview";
     mainContent.appendChild(listOverview);
 
     currentData.lists.forEach((list, idx) => {
@@ -147,8 +148,8 @@
       div.innerHTML = `
         <span>${item.name}</span>
         <div>
-        <button onclick="listClickCallback('editList',${idx})" class="buttonTest"><img src="assets/images/pen-to-square-solid-full.svg" alt="edit"></button>
-        <button onclick="listClickCallback('deleteList',${idx})" class="buttonTest"><img src="assets/images/trash-solid-full.svg" alt="delete"></button>
+        <button onclick="itemClickCallback('editItem',${idx})" class="buttonTest"><img src="assets/images/pen-to-square-solid-full.svg" alt="edit"></button>
+        <button onclick="itemClickCallback('deleteItem',${idx})" class="buttonTest"><img src="assets/images/trash-solid-full.svg" alt="delete"></button>
         </div>
       `;
       mainContent.appendChild(div);
@@ -156,7 +157,8 @@
 
     // Back button to go back to lists
     const back = document.createElement("button");
-    back.textContent = "Back";
+    back.className = "backButton";
+    back.innerHTML = "<img src='assets/images/arrow-left-solid-full.svg' alt='Baaaack'>";
     back.onclick = listView;
     mainContent.appendChild(back);
   }
