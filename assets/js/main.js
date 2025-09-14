@@ -119,8 +119,10 @@
       div.className = "listPreview";
       div.innerHTML = `
         <h2 onclick="listClickCallback('showList',${idx})">${list.name}</h2>
-        <button onclick="listClickCallback('editList',${idx})" class="buttonTest">Edit</button>
-        <button onclick="listClickCallback('deleteList',${idx})">Delete</button>
+        <div>
+        <button onclick="listClickCallback('editList',${idx})" class="buttonTest"><img src="assets/images/pen-to-square-solid-full.svg" alt="edit"></button>
+        <button onclick="listClickCallback('deleteList',${idx})" class="buttonTest"><img src="assets/images/trash-solid-full.svg" alt="delete"></button>
+        </div>
       `;
       mainContent.appendChild(div);
     });
@@ -144,8 +146,10 @@
       div.className = "itemPreview";
       div.innerHTML = `
         <span>${item.name}</span>
-        <button onclick="itemClickCallback('editItem',${idx})">Edit</button>
-        <button onclick="itemClickCallback('deleteItem',${idx})">Delete</button>
+        <div>
+        <button onclick="listClickCallback('editList',${idx})" class="buttonTest"><img src="assets/images/pen-to-square-solid-full.svg" alt="edit"></button>
+        <button onclick="listClickCallback('deleteList',${idx})" class="buttonTest"><img src="assets/images/trash-solid-full.svg" alt="delete"></button>
+        </div>
       `;
       mainContent.appendChild(div);
     });

@@ -30,12 +30,11 @@
          background-color: var(--secondary-yellow);
          color: #000000;
          border: #333333 2px solid;
-         border-radius: 8px;
          text-align: center;
          padding: 10px;
-         margin:  20px;
          font-size: 24px;
-         position: sticky;
+         position: fixed;
+         width: 100%;
          top: 0;
          }
          h1{
@@ -44,6 +43,8 @@
 
       #content {
          padding: 20px;
+         padding-top: 150px;
+         padding-bottom: 100px;
       }
 
       .listPreview {
@@ -52,6 +53,12 @@
          padding: 10px;
          margin-bottom: 20px;
          background-color: var(--secondary-yellow);
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      .listPreview h2:hover {
+         color: var(--darkMode-black);
       }
 
       .itemPreview {
@@ -61,22 +68,43 @@
          margin-bottom: 10px;
          background-color: var(--secondary-yellow);
          display: flex;
+         justify-content: space-between;
          align-items: center;
       }
       .itemPreview button {
          margin-left: 10px;
       }
+      .buttonTest{
+         width: 40px;
+         background-color: transparent;
+         border: none;
+      }
+      .buttonTest img {
+         width: 100%;
+         height: 100%;
+      }
+      #newListButton {
+         border: none;
+         background-color: transparent;
+         font-size: 50px;
+         cursor: pointer;
+      }
+
+      #newListButton:hover {
+         color: var(--darkMode-black);
+      }
 
       footer {
-         justify-content: center;   
-         text-align: center;
-         margin:  20px 20px 0px 20px;
+         width: 100%;
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         height: 100px;
          background-color: var(--secondary-yellow);
          border: #333333 2px solid;
-         border-radius: 8px;
-         height: 100px;
-         position: sticky;
-         bottom: 0;
+         text-align: center;
+         justify-content: center;
+         z-index: 100;
          }  
 
          /*.buttonTest {
@@ -111,3 +139,8 @@
             background-color: var(--darkMode-yellow);
             border-color: var(--darkMode-black);
          }
+
+
+
+         /* darkmode switch */
+         
