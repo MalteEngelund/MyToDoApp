@@ -8,7 +8,7 @@
   const dummyData = {
     lists: [
       { id: 1, name: "List 1", items: [
-        { id: 1, name: "Item 1", completed: false },
+        { id: 1, name: "Item 1", completed: false }, // jeg har ikke lavet completed (optional)
         { id: 2, name: "Item 2", completed: true }
       ]},
       { id: 2, name: "List 2", items: [] }
@@ -196,7 +196,7 @@
     ok.onclick = () => {
       // Push new item into active list
       currentData.lists[activeList].items.push({
-        id: Date.now(),
+        id: Date.now(), // sætter id til nuværende tid i ms (brug den kun til mindre apps)
         name: input.value,
         // completed: false  // ikke lavet (optional)
       });
